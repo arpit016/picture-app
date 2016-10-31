@@ -15,8 +15,8 @@
   <tbody>
     <% @images.each do |image| %>
       <tr>
-        <td><%= image.name %></td>
-        <td><%= image.picture %></td>
+        <td><%=link_to image.name, image_path(image) %></td>
+        <td><%= image_tag(image.picture.url, size: "100") if image.picture? %></td>
         <td><%= image.user %></td>
         <td><%= link_to 'Show', image, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_image_path(image), class: "btn btn-link" %></td>

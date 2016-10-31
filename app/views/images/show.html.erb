@@ -7,13 +7,9 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @image.picture %>
+  <%= image_tag (@image.picture.url, size: "300x300") if @image.picture? %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @image.user %>
-</p>
 
 <%= link_to 'Edit', edit_image_path(@image), class: "btn btn-link" %> |
 <%= link_to 'Back', images_path, class: "btn btn-link" %>

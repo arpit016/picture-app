@@ -21,8 +21,8 @@ $(document).ready(function() {
             console.log("Token:" + token);
             
             //Add the token to the form
-            f.append('<input type="hidden" name="user[stripe_card_token]" value="' + token + '" />');
-            console.log(f)
+            f.append('<input type="hidden" id="token-value" name="user[stripe_card_token]" value="' + token + '" />');
+            console.log("Hidden token value:" + $('#token-value').val());
             
             //Submit the form
             f.get(0).submit();

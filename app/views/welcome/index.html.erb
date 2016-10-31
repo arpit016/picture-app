@@ -10,9 +10,9 @@
 <div class="row">
   <div class="plans clearfix">
     <div class="col-lg-3 col-lg-offset-3 plan">
-      <h2>Premium Plan</h2>
+      <h2>Basic Plan</h2>
       <div class="price pull-right">
-        Price: $10
+        <strong>Price: Free</strong>
       </div>
       <div class="features">
         <ul>
@@ -22,13 +22,13 @@
         </ul>
       </div>
       <p>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+        <%= link_to 'Sign Up', new_user_registration_path(plan:@basic_plan.id), class: 'btn btn-primary sign-up' %>
       </p>
     </div>
     <div class="col-lg-3 plan">
       <h2>Amaze Plan</h2>
       <div class="price pull-right">
-        Price: $20
+        <strong>Price: $10<strong>
       </div>
       <div class="features">
         <ul>
@@ -39,7 +39,7 @@
         </ul>
       </div>
       <p>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary sign-up' %>
+        <%= link_to 'Sign Up', new_user_registration_path(plan:@pro_plan.id), class: 'btn btn-primary sign-up' %>
       </p>
     </div>
   </div>
